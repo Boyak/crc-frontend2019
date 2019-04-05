@@ -3,32 +3,15 @@
 var Basic = {
   //zadania pierwsze
   calculateDiscount: function(price) {
-    if(price > 1000){
-      return price * 0.1;
-    }
-    else {
-      return price * 0.5
-    }
+    //kalkulacje tutaj
   },
   //zadania drugie
   getLongestWord: function(words) {
-    let longest = '';
-    words.forEach(word => {
-      if(typeof word == 'string' && word.length > longest.length){
-        longest = word;
-      }
-    });
-    return longest;
+    //Logika tutaj
   },
   //zdanie trzecie
   getImplementedObject: function(words) {
-    var obj = {
-      fuelConsumption: 7,
-      brand: 'VW',
-      calculate100kmRoadPrice(price){
-        return price * this.fuelConsumption;
-      }
-    }
+    var obj = //twój obiekt tutaj
     return obj;
   },
   
