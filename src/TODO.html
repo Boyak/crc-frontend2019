@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CRC + Frontend</title>
+    <style>
+        .container {
+            margin: 5% 20%;
+            background-color: #d8d8d8;
+            padding: 1em 2em;
+            border-radius: 0.4em;
+        }
+        .item {
+            color: white;
+        }
+        #taskNamefield {
+            width: 70%;
+            border-radius: 0.4em;
+            border: solid grey 1px;
+        }
+        button {
+            width: 20%;
+            margin-left: 0.4em;
+            background-color: #ff6200;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO list</h1>
+        <div>
+            <input id="taskNamefield"><button onclick="addTask()">Add!</button>
+            <div id="items">
+            </div>
+        </div>
+    </div>
+    <script>
+        function addTask(){
+            var field = document.querySelector('#taskNamefield');
+            var itemContainer = document.querySelector('#items');
+            var TodoTask = document.createElement('div');
+            TodoTask.className = 'item'
+            TodoTask.innerHTML = field.value;
+            field.value = null;
+            itemContainer.appendChild(TodoTask)
+        }
+    </script>
+</body>
+</html>
